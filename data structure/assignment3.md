@@ -1,6 +1,6 @@
 # Assignment 3
 ## task
-1. The most important part of this the N which means that the time moves linearly which means that the steps increase in porportion with the input size. both the 4 and the +16 are constant and the don't effect linear groqwth.
+1. The most important part of this the N which means that the time moves linearly which means that the steps increase in porportion with the input size. both the 4 and the +16 are constant and the don't effect linear growth.
 2. The most important part of this the N^2 which means that we have a quadratic time which basically means if the input doubles the steps grow 4 times more. the 2 is a constant and it doesn't affect overall growth.
 3. The following function goes through the array twice. The first loop doubles every element and the second loop adds them all together. Even thought there's two loops one runs after the other. That means the time grows linearly which means the complexity is O(N).
 4. In the following function every string gets processed three times upcase, lowcase, and capitalize. Even though it's three moves happening, these moves are all constant and the number of steps grows in porportion with the number of strings which means the complexity is O(N).
