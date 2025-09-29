@@ -31,12 +31,7 @@ cout << name << " -> hash = " << h << endl;
 return 0;
 }
 ## 3.
-## Hash Table with Tombstone (Linear Probing)
 
 | Index | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 |-------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
-| Value | 200 | †   | ⋄   | ⋄   | ⋄   | 50  | 350 | ⋄   | 400 | ⋄   |
-
-Legend:  
-- `⋄` = EMPTY  
-- `†` = TOMBSTONE  
+| Value | 200 | -2   | ⋄   | ⋄   | ⋄   | 50  | 350 | ⋄   | 400 | ⋄   |
