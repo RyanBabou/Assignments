@@ -37,4 +37,5 @@ return 0;
 | Value | 200 | T   | ⋄   | ⋄   | ⋄   | 50  | 350 | ⋄   | 400 | ⋄   |
 
 T = Tombstone
+
 Introducing the tombstone makes the searches slower because the probe has to keep checking past deleated cells instead pof stopping right away.
