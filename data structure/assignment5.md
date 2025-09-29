@@ -1,6 +1,6 @@
 # Assignment 5
 ## Task
-### 1.
+1.
 #include <iostream>
 #include <unordered_map>
 #include <vector>
@@ -19,7 +19,7 @@ cout << q << " not found" << endl;
 
 return 0;
 }
-### 2.
+2.
 #include <iostream>
 #include <string>
 #include <functional>
@@ -30,5 +30,5 @@ size_t h = hash<string>{}(name);
 cout << name << " -> hash = " << h << endl;
 return 0;
 }
-### 3.
+3.
 
