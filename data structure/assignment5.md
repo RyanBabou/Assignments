@@ -1,10 +1,8 @@
 # Assignment 5
 ## Task
 ### 1.
-
-
-
 #include <bits/stdc++.h>
+
 using namespace std;
 int main() {
     vector<int> array = {200, 400, 100, 50, 350};
