@@ -39,3 +39,5 @@ return 0;
 T = Tombstone
 
 Introducing the tombstone makes the searches slower because the probe has to keep checking past deleated cells instead of stopping right away.
+##Link 
+https://drive.google.com/file/d/10UrDcITxHJ9GkE3ugwZ_UDPtD02BBRLz/view?usp=sharing
