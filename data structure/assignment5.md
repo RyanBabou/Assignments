@@ -1,6 +1,6 @@
 # Assignment 5
 ## Task
-### 1
+### 1.
 #include <iostream>
 #include <unordered_map>
 using namespace std;
@@ -30,5 +30,5 @@ int main() {
     cout << "Hash value of " << name << " is: " << hash_value << endl;
     return 0;
 }
-### 3
+### 3.
 
