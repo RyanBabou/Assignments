@@ -1,26 +1,34 @@
 # Assignment 5
 ## Task
 ### 1.
-#include <bits/stdc++.h>
+#include <iostream>
+#include <unordered_map>
+#include <vector>
 using namespace std;
 int main() {
 vector<int> arr = {200, 400, 100, 50, 350};
-unordered_set<int> s(arr.begin(), arr.end());
-vector<int> queries = {50, 125, 350};
-for (int q : queries) {
-bool found = s.find(q) != s.end();
-cout << q << (found ? " -> found" : " -> not found") << "\n";
+unordered_map<int, bool> MedicalRecord;
+for (int x : arr) {
+MedicalRecord[x] = true;
 }
+int q = 400;
+if (MedicalRecord.count(q))
+cout << q << " found" << endl;
+else
+cout << q << " not found" << endl;
+
 return 0;
-}'''
+}
 ### 2.
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <functional>
 using namespace std;
 int main(){
-string name = "Ryan Babou"; // ← replace with your exact full name if needed
-size_t h = hash<string>{}(name); // implementation-defined hash
-cout << name << " -> hash = " << h << "\n";
+string name = "Ryan Babou";
+size_t h = hash<string>{}(name); 
+cout << name << " -> hash = " << h << endl;
 return 0;
-}'''
+}
 ### 3.
 
