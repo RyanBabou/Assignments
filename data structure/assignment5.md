@@ -1,21 +1,19 @@
 # Assignment 5
 ## Task
 ### 1.
-#include <iostream>
-#include <unordered_map>
+#include <bits/stdc++.h>
 using namespace std;
+
 int main() {
-    int arr[] = {200, 400, 100, 50, 350};
-    int n = 5;
-    unordered_map<int, bool> hashTable;
-    for (int i = 0; i < n; i++) {
-        hashTable[arr[i]] = true;
-    }
-    int key = 100;
-    if (hashTable.find(key) != hashTable.end()) {
-        cout << key << " found!" << endl;
-    } else {
-        cout << key << " not found!" << endl;
+    vector<int> array = {200, 400, 100, 50, 350};
+
+    unordered_set<int> H(array.begin(), array.end());
+
+
+    vector<int> queries = {50, 999, 200, 351};
+    for (int q : queries) {
+        bool found = H.find(q) != H.end(); // average O(1)
+        cout << q << (found ? " found" : " not found") << "\n";
     }
     return 0;
 }
