@@ -25,6 +25,7 @@ int main() {
     size_t hv = hash<string>{}(name);
     cout << "hash(\"" << name << "\") = " << hv << "\n";
     return 0;
-}```
+}
+```
 ### 3.
 
