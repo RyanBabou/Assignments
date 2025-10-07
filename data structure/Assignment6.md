@@ -41,7 +41,7 @@ else
         Q.head = Q.head + 1
     return x
 4.
-The four O(1)-time procedures to insert elements into and delete elements from both ends of a deque implemented by an array are as follows. INSERT_FRONT which checks for overflow, moves the head one step backward, and places the new element at
-Q[head]. INSERT_REAR which checks for overflow, places the new element at Q[tail], and then moves the tail one step forward (wrapping around if needed). DELETE_FRONT which checks for underflow, removes the element at Q[head], and then moves the head
-one step forward (wrapping around if needed). DELETE_REAR which checks for underflow, moves the tail one step backward (wrapping around if needed), and removes the element at Q[tail].
+deque is like a queue that works at both ends. With an array and two pointers (head for the front and tail for the rear), you can add or remove items in constant time. To insert at the front, first check if it’s full; if not, move the head one step
+back (wrapping around if needed) and put the item there. To insert at the rear, check for overflow, place the item at the tail, then move the tail one step forward. To delete from the front, make sure it’s not empty, take out the item at the head,
+and move the head forward. To delete from the rear, check underflow, move the tail one step back, and remove that item. Because each step is just a small pointer move and one assignment, all four operations run in O(1) time
 ## Link
