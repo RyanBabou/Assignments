@@ -7,9 +7,9 @@
 | 1    | PUSH(S,4)     | [4]                          | Top = 1     |
 | 2    | PUSH(S,1)     | [4, 1]                       | Top = 2     |
 | 3    | PUSH(S,3)     | [4, 1, 3]                    | Top = 3     |
-| 4    | POP(S)        | [4, 1] (removed 3)           | Top = 2     |
+| 4    | POP(S)        | [4, 1]                       | Top = 2     |
 | 5    | PUSH(S,8)     | [4, 1, 8]                    | Top = 3     |
-| 6    | POP(S)        | [4, 1] (removed 8)           | Top = 2     |
+| 6    | POP(S)        | [4, 1]                       | Top = 2     |
 2. `ENQUEUE(Q,4), ENQUEUE(Q,1), ENQUEUE(Q,3), DEQUEUE(Q), ENQUEUE(Q,8), DEQUEUE(Q)`
 
 | Step | Operation      | Queue Content (Front → Rear) | Head | Tail |
@@ -17,9 +17,9 @@
 | 1    | ENQUEUE(Q,4)   | [4]                          | 1    | 2    |
 | 2    | ENQUEUE(Q,1)   | [4, 1]                       | 1    | 3    |
 | 3    | ENQUEUE(Q,3)   | [4, 1, 3]                    | 1    | 4    |
-| 4    | DEQUEUE(Q)     | [1, 3] (removed 4)           | 2    | 4    |
+| 4    | DEQUEUE(Q)     | [1, 3]                       | 2    | 4    |
 | 5    | ENQUEUE(Q,8)   | [1, 3, 8]                    | 2    | 5    |
-| 6    | DEQUEUE(Q)     | [3, 8] (removed 1)           | 3    | 5    |
+| 6    | DEQUEUE(Q)     | [3, 8]                       | 3    | 5    |
 
 3.
    ENQUEUE(Q, x)
