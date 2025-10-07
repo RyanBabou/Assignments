@@ -2,24 +2,24 @@
 ## Task
 1.
 
-| Step | Operation     | Stack Content (Bottom → Top) | Top Pointer |
-|------|---------------|-------------------------------|-------------|
-| 1    | PUSH(S,4)     | [4]                          | Top = 1     |
-| 2    | PUSH(S,1)     | [4, 1]                       | Top = 2     |
-| 3    | PUSH(S,3)     | [4, 1, 3]                    | Top = 3     |
-| 4    | POP(S)        | [4, 1]                       | Top = 2     |
-| 5    | PUSH(S,8)     | [4, 1, 8]                    | Top = 3     |
-| 6    | POP(S)        | [4, 1]                       | Top = 2     |
+| Step | Operation     | Stack Content (Bottom → Top) |
+|------|---------------|------------------------------|
+| 1    | PUSH(S,4)     | [4]                          | 
+| 2    | PUSH(S,1)     | [4, 1]                       | 
+| 3    | PUSH(S,3)     | [4, 1, 3]                    |
+| 4    | POP(S)        | [4, 1]                       |
+| 5    | PUSH(S,8)     | [4, 1, 8]                    |
+| 6    | POP(S)        | [4, 1]                       |
 2. 
 
-| Step | Operation      | Queue Content (Front → Rear) | Head | Tail |
-|------|----------------|-------------------------------|------|------|
-| 1    | ENQUEUE(Q,4)   | [4]                          | 1    | 2    |
-| 2    | ENQUEUE(Q,1)   | [4, 1]                       | 1    | 3    |
-| 3    | ENQUEUE(Q,3)   | [4, 1, 3]                    | 1    | 4    |
-| 4    | DEQUEUE(Q)     | [1, 3]                       | 2    | 4    |
-| 5    | ENQUEUE(Q,8)   | [1, 3, 8]                    | 2    | 5    |
-| 6    | DEQUEUE(Q)     | [3, 8]                       | 3    | 5    |
+| Step | Operation      | Queue Content (Front → Rear) |
+|------|----------------|------------------------------|
+| 1    | ENQUEUE(Q,4)   | [4]                          |
+| 2    | ENQUEUE(Q,1)   | [4, 1]                       | 
+| 3    | ENQUEUE(Q,3)   | [4, 1, 3]                    | 
+| 4    | DEQUEUE(Q)     | [1, 3]                       | 
+| 5    | ENQUEUE(Q,8)   | [1, 3, 8]                    | 
+| 6    | DEQUEUE(Q)     | [3, 8]                       | 
 
 3. Enque(Q,x)
   if NEXT(Q.tail) == Q.head  
