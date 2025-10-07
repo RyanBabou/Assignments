@@ -1,6 +1,6 @@
 # Assignment 6
 ## Task
-1. `PUSH(S,4), PUSH(S,1), PUSH(S,3), POP(S), PUSH(S,8), POP(S)`
+1.
 
 | Step | Operation     | Stack Content (Bottom → Top) | Top Pointer |
 |------|---------------|-------------------------------|-------------|
@@ -10,7 +10,7 @@
 | 4    | POP(S)        | [4, 1]                       | Top = 2     |
 | 5    | PUSH(S,8)     | [4, 1, 8]                    | Top = 3     |
 | 6    | POP(S)        | [4, 1]                       | Top = 2     |
-2. `ENQUEUE(Q,4), ENQUEUE(Q,1), ENQUEUE(Q,3), DEQUEUE(Q), ENQUEUE(Q,8), DEQUEUE(Q)`
+2. 
 
 | Step | Operation      | Queue Content (Front → Rear) | Head | Tail |
 |------|----------------|-------------------------------|------|------|
