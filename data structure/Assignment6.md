@@ -41,7 +41,8 @@ else
         Q.head = Q.head + 1
     return x
 4.
-deque is like a queue that works at both ends. With an array and two pointers, you can add or remove items in constant time. To insert at the front, first check if it’s full; if not, move the head one step
+A deque is like a queue that works at both ends. With an array and two pointers, you can add or remove items in constant time. To insert at the front, first check if it’s full; if not, move the head one step
 back  and put the item there. To insert at the rear, check for overflow, place the item at the tail, then move the tail one step forward. To delete from the front, make sure it’s not empty, take out the item at the head,
-and move the head forward. To delete from the rear, check underflow, move the tail one step back, and remove that item. Because each step is just a small pointer move and one assignment, all four operations run in O(1) time
+and move the head forward. To delete from the rear, check underflow, move the tail one step back, and remove that item. This is ecause each step is just a small pointer move and one assignment. All four operations run in O(1) time
 ## Link
+https://drive.google.com/file/d/1C6ZGyrUbdinMJ0ofKNtT9qGlp72UQzql/view?usp=sharing
