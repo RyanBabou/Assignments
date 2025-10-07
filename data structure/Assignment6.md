@@ -21,50 +21,27 @@
 | 5    | ENQUEUE(Q,8)   | [1, 3, 8]                    | 2    | 5    |
 | 6    | DEQUEUE(Q)     | [3, 8]                       | 3    | 5    |
 
-3.
-   ENQUEUE(Q, x)
-if ( (Q.tail + 1) % Q.length == Q.head )
+3. Enque(Q,x)
+  if NEXT(Q.tail) == Q.head  
     error "overflow"
 else
-    Q[Q.tail] = x
-    Q.tail = (Q.tail % Q.length) + 1
-
-DEQUEUE(Q)
-if (Q.head == Q.tail)
+    Q[Q.tail]= x
+    if Q.tail == Q.length
+        Q.tail = 1
+    else
+        Q.tail = Q.tail + 1
+Deque(Q)
+if Q.head == Q.tail  
     error "underflow"
 else
     x = Q[Q.head]
-    Q.head = (Q.head % Q.length) + 1
+    if Q.head == Q.length
+        Q.head = 1
+    else
+        Q.head = Q.head + 1
     return x
-4. 
-INSERT_FRONT(D, x)
-if ( (head - 1 + D.length) % D.length == tail )
-    error "overflow"
-else
-    head = (head - 1 + D.length) % D.length
-    D[head] = x
-
-INSERT_BACK(D, x)
-if ( (tail + 1) % D.length == head )
-    error "overflow"
-else
-    D[tail] = x
-    tail = (tail + 1) % D.length
-
-DELETE_FRONT(D)
-if (head == tail)
-    error "underflow"
-else
-    x = D[head]
-    head = (head + 1) % D.length
-    return x
-
-DELETE_BACK(D)
-if (head == tail)
-    error "underflow"
-else
-    tail = (tail - 1 + D.length) % D.length
-    x = D[tail]
-    return x
-
+4.
+The four O(1)-time procedures to insert elements into and delete elements from both ends of a deque implemented by an array are as follows. INSERT_FRONT which checks for overflow, moves the head one step backward, and places the new element at
+Q[head]. INSERT_REAR which checks for overflow, places the new element at Q[tail], and then moves the tail one step forward (wrapping around if needed). DELETE_FRONT which checks for underflow, removes the element at Q[head], and then moves the head
+one step forward (wrapping around if needed). DELETE_REAR which checks for underflow, moves the tail one step backward (wrapping around if needed), and removes the element at Q[tail].
 ## Link
