@@ -1,6 +1,7 @@
 # Assignment 7
 ## Task
-1. #include <iostream>
+1.
+   #include <iostream>
 using namespace std;
 struct Node {
     int data;
