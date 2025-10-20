@@ -58,8 +58,5 @@ int main() {
     cout << "Binary search tree built successfully." << endl;
     return 0;
 }
-
-
-
 ```
 ## link
