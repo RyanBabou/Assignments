@@ -29,32 +29,33 @@ function findMax(root):
 #include <iostream>
 #include <vector>
 using namespace std;
-struct Node {
+class Node {
+public:
     int val;
     Node* left;
     Node* right;
-    Node(int v): val(v), left(nullptr), right(nullptr) {}
-};
 
+    Node(int v) : val(v), left(nullptr), right(nullptr) {}
+};
 Node* insert(Node* root, int v) {
-    if (!root) return new Node(v);
-    if (v < root->val) root->left = insert(root->left, v);
-    else               root->right = insert(root->right, v);
+    if (root == nullptr) {
+        return new Node(v);
+    }
+    if (v < root->val) {
+        root->left = insert(root->left, v);
+    } else {
+        root->right = insert(root->right, v);
+    }
     return root;
 }
 
 int main() {
     vector<int> a = {1, 5, 9, 2, 4, 10, 6, 3, 8};
     Node* root = nullptr;
-    for (int x : a) root = insert(root, x);
-    auto printInOrder = [&](auto&& self, Node* n) -> void {
-        if (!n) return;
-        self(self, n->left);
-        cout << n->val << " ";
-        self(self, n->right);
-    };
-    printInOrder(printInOrder, root);
-    cout << "\n";
+    for (int x : a) {
+        root = insert(root, x);
+    }
+     cout << "Binary search tree built successfully." << std::endl;
     return 0;
 }
 
