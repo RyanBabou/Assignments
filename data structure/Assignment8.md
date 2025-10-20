@@ -13,7 +13,7 @@
         /   \
        3     8
 ```
-2. The maximum number of steps it would take to search for a value is 10 steps because log_2(1000)=9.9 
+2. The maximum number of steps it would take to search for a value is 10, because log_2 (1000) ≈ 9.9, and we count node visits so it's about 10 nodes.
 3.
 ```text
 function findMax(root):
