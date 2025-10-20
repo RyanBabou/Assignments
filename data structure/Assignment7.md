@@ -1,6 +1,6 @@
 # Assignment 7
 ## Task
-1.
+'''text
    #include <iostream>
 using namespace std;
 struct Node {
@@ -43,5 +43,6 @@ int main() {
     printList();
     return 0;
 }
+'''
 ## link
 https://drive.google.com/file/d/1gdA514eQccn3gdnwazICovMLIQlu2RdX/view?usp=sharing
