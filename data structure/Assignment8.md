@@ -31,7 +31,7 @@ function findMax(root):
     while node.right is not null:
         node = node.right
     return node.value
-'''
+```
 4.
 '''text
 #include <iostream>
@@ -80,4 +80,4 @@ int main() {
 
     return 0;
 }
-'''
+```
