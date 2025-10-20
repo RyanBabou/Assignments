@@ -1,6 +1,6 @@
 # Assignment 8
 ### Task
-### 1) Binary Search Tree
+1.
 
 ```text
         1
