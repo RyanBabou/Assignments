@@ -34,9 +34,9 @@ public:
     int val;
     Node* left;
     Node* right;
-
     Node(int v) : val(v), left(nullptr), right(nullptr) {}
 };
+
 Node* insert(Node* root, int v) {
     if (root == nullptr) {
         return new Node(v);
@@ -48,16 +48,18 @@ Node* insert(Node* root, int v) {
     }
     return root;
 }
-
 int main() {
     vector<int> a = {1, 5, 9, 2, 4, 10, 6, 3, 8};
     Node* root = nullptr;
+
     for (int x : a) {
         root = insert(root, x);
     }
-     cout << "Binary search tree built successfully." << std::endl;
+    cout << "Binary search tree built successfully." << endl;
     return 0;
 }
+
+
 
 ```
 ## link
