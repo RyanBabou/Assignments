@@ -33,7 +33,7 @@ function findMax(root):
     return node.value
 ```
 4.
-'''text
+```text
 #include <iostream>
 using namespace std;
 
