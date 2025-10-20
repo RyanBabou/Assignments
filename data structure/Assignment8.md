@@ -20,7 +20,7 @@
           3
            \
             8
-
+'''
 2. The maximum number of steps it would take to search for a value within is 10 steps because log_2(1000)=10
 3.
 '''text
@@ -31,6 +31,7 @@ function findMax(root):
     while node.right is not null:
         node = node.right
     return node.value
+'''
 4.
 '''text
 #include <iostream>
@@ -79,3 +80,4 @@ int main() {
 
     return 0;
 }
+'''
