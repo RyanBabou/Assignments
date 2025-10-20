@@ -23,7 +23,7 @@
 ```
 2. The maximum number of steps it would take to search for a value within is 10 steps because log_2(1000)=10
 3.
-'''text
+```text
 function findMax(root):
     if root is null: 
         return null
