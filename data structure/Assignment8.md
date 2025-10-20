@@ -1,6 +1,7 @@
 # Assignment 8
 ## Task
-1.             
+1.
+        
     1
      \
       5
