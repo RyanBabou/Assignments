@@ -13,7 +13,7 @@
         /   \
        3     8
 ```
-2. The maximum number of steps it would take to search for a value within is 10 steps because log_2(1000)=9.9 which we can round to 10
+2. The maximum number of steps it would take to search for a value within is 10 steps because log_2(1000)=9.9 
 3.
 ```text
 function findMax(root):
