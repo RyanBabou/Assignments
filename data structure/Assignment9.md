@@ -12,17 +12,19 @@
 ```
 2.
 ```text
-        9
+        10
       /  \
-     6    8
+     9    8
     / \  / \
-   3   5 7   4
+   6   5 7   4
   / \ 
  2   1
+    /
+   3
 ```
 3. the new order the new numbers would appear at is
 ```text
 [99,68,55,34,22,10,2]
 ```
 ## link
-https://drive.google.com/file/d/1YFayWMGJCFrKLS--zn6ghNEss0QQ2OsO/view?usp=sharing
+
