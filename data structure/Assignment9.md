@@ -17,10 +17,8 @@
      9    8
     / \  / \
    6   5 7   4
-  / \ 
- 2   1
-    /
-   3
+  / \  / 
+ 2   1 3
 ```
 3. the new order the new numbers would appear at is
 ```text
