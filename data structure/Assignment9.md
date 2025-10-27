@@ -20,11 +20,7 @@
   / \ 
  2   1
 ```
-3.    
+3. the new order the new numbers would appear at is
 ```text
-    99
-   /  \
-  22  68
- / \  / \
-10 2 34  55
+[99,68,55,34,22,10,2]
 ```
