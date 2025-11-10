@@ -1,6 +1,6 @@
 # Assignment 10
 ## Task
-1.```text
+1.```
     A
    / \
   B   C
@@ -8,8 +8,8 @@
 D   E---F
      \
       G
-```
-2. 
+
+2. ```
 #include <iostream>
 #include <queue>
 #include <stack>
