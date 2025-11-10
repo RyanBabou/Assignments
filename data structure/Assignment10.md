@@ -101,4 +101,4 @@ int main() {
     return 0;
 }
 ```
-2.  BFS and DFS run in O(V+E) time because they check every vertex and they examine each edge at most once, they both use O(V) with BFS storing discovered vertices in a queue and DFS storing them in a stack or recursion path.
+3.  BFS and DFS run in O(V+E) time because they check every vertex and they examine each edge at most once, they both use O(V) with BFS storing discovered vertices in a queue and DFS storing them in a stack or recursion path.
