@@ -1,15 +1,15 @@
 # Assignment 10
 ## Task
-1.  A
+1.```text
+    A
    / \
   B   C
  / \   \
 D   E---F
      \
       G
-
-      G
-2. ```text
+```
+3. ```text
 #include <iostream>
 #include <queue>
 #include <stack>
