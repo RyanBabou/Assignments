@@ -12,7 +12,9 @@ D   E---F
       G
 
 ```
-2. ```text
+2.
+
+```text
 #include <iostream>
 #include <queue>
 #include <stack>
@@ -98,5 +100,5 @@ int main() {
     DFS_rec('A');
     return 0;
 }
-   ```
-3.  BFS and DFS run in O(V+E) time because they check every vertex and they examine each edge at most once, they both use O(V) with BFS storing discovered vertices in a queue and DFS storing them in a stack or recursion path.
+```
+2.  BFS and DFS run in O(V+E) time because they check every vertex and they examine each edge at most once, they both use O(V) with BFS storing discovered vertices in a queue and DFS storing them in a stack or recursion path.
