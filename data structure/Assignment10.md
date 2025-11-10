@@ -9,7 +9,7 @@ D   E---F
      \
       G
 ```
-3. ```text
+3.  ```text
 #include <iostream>
 #include <queue>
 #include <stack>
