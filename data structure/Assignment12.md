@@ -5,7 +5,8 @@
    return if low > high
    ```
  2. The function will keep recursing into negative numbers and never stop. AT some point it will cause a stack overflow error.
-3.
+3.   the fixed code is:
+   
    ```text
    def sum(low, high)
     return 0 if high < low
