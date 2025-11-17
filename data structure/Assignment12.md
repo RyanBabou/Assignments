@@ -13,7 +13,7 @@
     return high + sum(low, high - 1)
 end
 ```
-4. the code is
+4. 
    ```text
    def print_numbers(item)
     if item.is_a?(Numeric)
@@ -24,4 +24,4 @@ end
         end
     end
 end
-```
+ ```
