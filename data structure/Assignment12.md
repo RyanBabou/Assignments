@@ -13,3 +13,15 @@
     return high + sum(low, high - 1)
 end
 ```
+4. the code is
+   ```text
+   def print_numbers(item)
+    if item.is_a?(Numeric)
+        puts item
+    else
+        item.each do |element|
+            print_numbers(element)
+        end
+    end
+end
+```
