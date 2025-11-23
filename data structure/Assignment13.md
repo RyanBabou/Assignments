@@ -2,7 +2,8 @@
 ## Task
 1. The space complexity is O(N^²) because the function creates a new array (collection) that can grow to hold about N × (N − 1) new strings, which is proportional to N^2.
 2. The space complexity is O(N) because the function creates a new array (newArray) that stores all N elements from the original array.
-3.
+3.  
+ ```text
   function reverseInPlace(array) {
   let left = 0;
   let right = array.length - 1;
@@ -15,5 +16,5 @@
   }
   return array;
 }
-
+```
    
