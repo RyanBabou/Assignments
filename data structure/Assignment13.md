@@ -17,4 +17,11 @@
   return array;
 }
 ```
+4. 
+
+| Version    | Time Complexity | Space Complexity |
+|----------- |-----------------|------------------|
+| Version #1 | **O(N)**        | **O(N)**         |
+| Version #2 | **O(N)**        | **O(1)**         |
+| Version #3 | **O(N)**        | **O(N)**         |
    
