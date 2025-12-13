@@ -2,28 +2,38 @@
 ## Task
 1. The best case function is
    ```text
-   return if low > high
+ if (low > high) return;
+
    ```
  2. The function will keep recursing into negative numbers and never stop. At some point it will cause a stack overflow error.
 3.   the fixed code is:
    
    ```text
-   def sum(low, high)
-    return 0 if high < low
-    return high + sum(low, high - 1)
-end
+   int sum(int low, int high) {
+    if (high < low) return 0;
+    return high + sum(low, high - 1);
+}
 ```
 4.  The recursive code is:
    ```text
-   def print_numbers(item)
-    if item.is_a?(Numeric)
-        puts item
-    else
-        item.each do |element|
-            print_numbers(element)
-        end
-    end
-end
+   #include <iostream>
+#include <vector>
+#include <variant>
+
+using namespace std;
+
+using Item = variant<int, vector<variant<int, vector<Item>>>>; // forward recursion workaround
+using Array = vector<Item>;
+
+void print_numbers(const Array& arr) {
+    for (const auto& element : arr) {
+        if (holds_alternative<int>(element)) {
+            cout << get<int>(element) << endl;
+        } else {
+            print_numbers(get<Array>(element));
+        }
+    }
+}
  ```
 ## Link
 https://drive.google.com/file/d/1mvMC1wjQQYPFFPvoWpjQhMy6Kw1iLC3_/view?usp=sharing
