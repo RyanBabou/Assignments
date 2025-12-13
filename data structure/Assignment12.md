@@ -2,10 +2,9 @@
 ## Task
 1. The best case function is
    ```text
- if (low > high) return;
-
+    if (low > high) return;
    ```
- 2. The function will keep recursing into negative numbers and never stop. At some point it will cause a stack overflow error.
+ 2. The function will keep recursing into negative numbers and never stop. At some point it will cause a stack overflow error. 
 3.   the fixed code is:
    
    ```text
