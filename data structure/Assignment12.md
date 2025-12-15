@@ -1,6 +1,6 @@
 # Assignment 12
 ## Task
-1. The best case function is
+1. The base case function is
    ```text
     if (low > high) return;
    ```
