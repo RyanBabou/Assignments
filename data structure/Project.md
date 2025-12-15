@@ -1,26 +1,66 @@
 # Project
 1.
 ```text
-    struct Player {
+    #include <iostream>
+#include <vector>
+#include <string>
+#include <unordered_set>
+
+using namespace std;
+
+struct Player {
     string first_name;
     string last_name;
     string team;
 };
 
-vector<string> playersInBothSports(const vector<Player>& a, const vector<Player>& b) {
+// Function to find players who play both sports
+vector<string> findCommonPlayers(const vector<Player>& basketball,
+                                 const vector<Player>& football) {
     unordered_set<string> names;
     vector<string> result;
 
-    for (const auto& p : a)
+    // Store full names from basketball players
+    for (const auto& p : basketball) {
         names.insert(p.first_name + " " + p.last_name);
+    }
 
-    for (const auto& p : b) {
-        string full = p.first_name + " " + p.last_name;
-        if (names.count(full))
-            result.push_back(full);
+    // Check football players against the set
+    for (const auto& p : football) {
+        string fullName = p.first_name + " " + p.last_name;
+        if (names.count(fullName)) {
+            result.push_back(fullName);
+        }
     }
 
     return result;
+}
+
+int main() {
+    vector<Player> basketball_players = {
+        {"Jill", "Huang", "Gators"},
+        {"Janko", "Barton", "Sharks"},
+        {"Wanda", "Vakulskas", "Sharks"},
+        {"Jill", "Moloney", "Gators"},
+        {"Luuk", "Watkins", "Gators"}
+    };
+
+    vector<Player> football_players = {
+        {"Hanzla", "Radosti", "32ers"},
+        {"Tina", "Watkins", "Barleycorns"},
+        {"Alex", "Patel", "32ers"},
+        {"Jill", "Huang", "Barleycorns"},
+        {"Wanda", "Vakulskas", "Barleycorns"}
+    };
+
+    vector<string> commonPlayers =
+        findCommonPlayers(basketball_players, football_players);
+
+    for (const auto& name : commonPlayers) {
+        cout << name << endl;
+    }
+
+    return 0;
 }
 ```
 2.
