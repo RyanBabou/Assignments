@@ -56,13 +56,34 @@ int main() {
 ```
 2.
 ```text
-int findMissing(const vector<int>& nums) {
-    int n = nums.size();
-    long long expected = (long long)n * (n + 1) / 2;
-    long long actual = 0;
+#include <iostream>
+#include <vector>
 
-    for (int x : nums) actual += x;
-    return expected - actual;
+using namespace std;
+
+// Function to find the missing number
+int findMissingNumber(const vector<int>& nums) {
+    int n = nums.size();
+
+    // Sum of numbers from 0 to n
+    int expectedSum = n * (n + 1) / 2;
+
+    int actualSum = 0;
+    for (int num : nums) {
+        actualSum += num;
+    }
+
+    return expectedSum - actualSum;
+}
+
+int main() {
+    vector<int> example1 = {2, 3, 0, 6, 1, 5};
+    vector<int> example2 = {8, 2, 3, 9, 4, 7, 5, 0, 6};
+
+    cout << findMissingNumber(example1) << endl; // 4
+    cout << findMissingNumber(example2) << endl; // 1
+
+    return 0;
 }
 ```
 3.
