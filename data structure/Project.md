@@ -74,7 +74,7 @@ int findMissingNumber(const vector<int>& nums) {
 int main() {
     vector<int> example1 = {2, 3, 0, 6, 1, 5};
     vector<int> example2 = {8, 2, 3, 9, 4, 7, 5, 0, 6};
-    cout << "Missing numbers:" << endl;
+    cout << "The missing numbers:" << endl;
     cout << findMissingNumber(example1) << endl;
     cout << findMissingNumber(example2) << endl;
     return 0;
@@ -164,7 +164,7 @@ int main() {
         97.8, 98.5, 98.2, 98.0, 97.1
     };
     vector<double> sorted = sortTemperatures(temps);
-    cout << "Sorted temperatures:" << endl;
+    cout << "temperatures from lowest to highest:" << endl;
     cout << fixed << setprecision(1);
     for (double t : sorted) {
         cout << t << " ";
