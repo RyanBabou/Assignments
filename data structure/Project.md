@@ -13,29 +13,21 @@ struct Player {
     string last_name;
     string team;
 };
-
-// Function to find players who play both sports
 vector<string> findCommonPlayers(const vector<Player>& basketball,
                                  const vector<Player>& football) {
     unordered_set<string> names;
     vector<string> result;
-
-    // Store full names from basketball players
     for (const auto& p : basketball) {
         names.insert(p.first_name + " " + p.last_name);
     }
-
-    // Check football players against the set
     for (const auto& p : football) {
         string fullName = p.first_name + " " + p.last_name;
         if (names.count(fullName)) {
             result.push_back(fullName);
         }
     }
-
     return result;
 }
-
 int main() {
     vector<Player> basketball_players = {
         {"Jill", "Huang", "Gators"},
@@ -59,7 +51,6 @@ int main() {
     for (const auto& name : commonPlayers) {
         cout << name << endl;
     }
-
     return 0;
 }
 ```
