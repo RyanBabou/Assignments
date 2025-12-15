@@ -88,20 +88,30 @@ int main() {
 ```
 3.
 ```text
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 int maxProfit(const vector<int>& prices) {
     if (prices.empty()) return 0;
 
     int minPrice = prices[0];
     int maxProfit = 0;
 
-    for (int price : prices) {
-        minPrice = min(minPrice, price);
-        maxProfit = max(maxProfit, price - minPrice);
+    for (int i = 1; i < prices.size(); i++) {
+        minPrice = min(minPrice, prices[i]);
+        maxProfit = max(maxProfit, prices[i] - minPrice);
     }
 
     return maxProfit;
 }
+int main() {
+    vector<int> prices = {10, 7, 5, 8, 11, 2, 6};
 
+    cout << maxProfit(prices) << endl; 
+
+    return 0;
+}
 ```
 4.
 ```text
