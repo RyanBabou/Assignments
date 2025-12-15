@@ -1,5 +1,5 @@
 # Project
-1.
+## Task 1
 ```text
     #include <iostream>
 #include <vector>
@@ -54,7 +54,7 @@ int main() {
     return 0;
 }
 ```
-2.
+## Task 2
 ```text
 #include <iostream>
 #include <vector>
@@ -86,7 +86,7 @@ int main() {
     return 0;
 }
 ```
-3.
+## Task 3
 ```text
 #include <iostream>
 #include <vector>
@@ -113,7 +113,7 @@ int main() {
     return 0;
 }
 ```
-4.
+## Task 4
 ```text
 #include <iostream>
 #include <vector>
@@ -146,7 +146,7 @@ int main() {
 }
 
 ```
-5.
+## Task 5
 ```text
 #include <iostream>
 #include <vector>
@@ -191,7 +191,7 @@ int main() {
     return 0;
 }
 ```
-6.
+## Task 6
 ```text
 #include <iostream>
 #include <vector>
