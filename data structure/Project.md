@@ -150,21 +150,19 @@ int main() {
 ```text
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
-// Function to sort temperature readings in O(N)
 vector<double> sortTemperatures(const vector<double>& temps) {
-    const int RANGE = 21; // 97.0 to 99.0 inclusive, step 0.1
+    const int RANGE = 21;
     vector<int> counts(RANGE, 0);
 
-    // Count occurrences
     for (double temp : temps) {
-        int index = static_cast<int>((temp - 97.0) * 10);
+        int index = static_cast<int>((temp - 97.0) * 10 + 0.5);
         counts[index]++;
     }
 
-    // Rebuild sorted result
     vector<double> sortedTemps;
     for (int i = 0; i < RANGE; i++) {
         while (counts[i] > 0) {
@@ -184,6 +182,7 @@ int main() {
 
     vector<double> sorted = sortTemperatures(temps);
 
+    cout << fixed << setprecision(1);
     for (double t : sorted) {
         cout << t << " ";
     }
