@@ -115,63 +115,120 @@ int main() {
 ```
 4.
 ```text
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
 int highestProduct(const vector<int>& nums) {
     int max1 = INT_MIN, max2 = INT_MIN;
     int min1 = INT_MAX, min2 = INT_MAX;
 
-    for (int x : nums) {
-        if (x > max1) { max2 = max1; max1 = x; }
-        else if (x > max2) max2 = x;
-
-        if (x < min1) { min2 = min1; min1 = x; }
-        else if (x < min2) min2 = x;
+    for (int num : nums) {
+        if (num > max1) {
+            max2 = max1;
+            max1 = num;
+        } else if (num > max2) {
+            max2 = num;
+        }
+        if (num < min1) {
+            min2 = min1;
+            min1 = num;
+        } else if (num < min2) {
+            min2 = num;
+        }
     }
-
     return max(max1 * max2, min1 * min2);
+}
+int main() {
+    vector<int> nums = {5, -10, -6, 9, 4};
+    cout << highestProduct(nums) << endl; 
+    return 0;
 }
 
 ```
 5.
 ```text
-vector<double> sortTemps(const vector<double>& temps) {
-    const int size = 21; 
-    int count[size] = {0};
+#include <iostream>
+#include <vector>
 
-    for (double t : temps) {
-        int idx = (int)((t - 97.0) * 10);
-        count[idx]++;
+using namespace std;
+
+// Function to sort temperature readings in O(N)
+vector<double> sortTemperatures(const vector<double>& temps) {
+    const int RANGE = 21; // 97.0 to 99.0 inclusive, step 0.1
+    vector<int> counts(RANGE, 0);
+
+    // Count occurrences
+    for (double temp : temps) {
+        int index = static_cast<int>((temp - 97.0) * 10);
+        counts[index]++;
     }
 
-    vector<double> sorted;
-    for (int i = 0; i < size; i++) {
-        double value = 97.0 + (i * 0.1);
-        while (count[i]--)
-            sorted.push_back(value);
+    // Rebuild sorted result
+    vector<double> sortedTemps;
+    for (int i = 0; i < RANGE; i++) {
+        while (counts[i] > 0) {
+            sortedTemps.push_back(97.0 + i * 0.1);
+            counts[i]--;
+        }
     }
 
-    return sorted;
+    return sortedTemps;
+}
+
+int main() {
+    vector<double> temps = {
+        98.6, 98.0, 97.1, 99.0, 98.9,
+        97.8, 98.5, 98.2, 98.0, 97.1
+    };
+
+    vector<double> sorted = sortTemperatures(temps);
+
+    for (double t : sorted) {
+        cout << t << " ";
+    }
+
+    return 0;
 }
 ```
 6.
 ```text
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+
+using namespace std;
+
+// Function to find the length of the longest consecutive sequence
 int longestConsecutive(const vector<int>& nums) {
-    unordered_set<int> s(nums.begin(), nums.end());
+    unordered_set<int> numSet(nums.begin(), nums.end());
     int longest = 0;
 
-    for (int x : nums) {
-        if (!s.count(x - 1)) { 
-            int current = x;
-            int length = 1;
+    for (int num : numSet) {
+        // Only start counting if this is the beginning of a sequence
+        if (!numSet.count(num - 1)) {
+            int currentNum = num;
+            int currentLength = 1;
 
-            while (s.count(current + 1)) {
-                current++;
-                length++;
+            while (numSet.count(currentNum + 1)) {
+                currentNum++;
+                currentLength++;
             }
 
-            longest = max(longest, length);
+            longest = max(longest, currentLength);
         }
     }
 
     return longest;
+}
+
+int main() {
+    vector<int> nums1 = {10, 5, 12, 3, 55, 30, 4, 11, 2};
+    vector<int> nums2 = {19, 13, 15, 12, 18, 14, 17, 11};
+
+    cout << longestConsecutive(nums1) << endl; // Expected output: 4
+    cout << longestConsecutive(nums2) << endl; // Expected output: 5
+
+    return 0;
 }
 ```
