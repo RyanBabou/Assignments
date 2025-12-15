@@ -1,7 +1,7 @@
 # Project
 ## Task 1
 ```text
-    #include <iostream>
+   #include <iostream>
 #include <vector>
 #include <string>
 #include <unordered_set>
@@ -13,21 +13,26 @@ struct Player {
     string last_name;
     string team;
 };
+
 vector<string> findCommonPlayers(const vector<Player>& basketball,
                                  const vector<Player>& football) {
     unordered_set<string> names;
     vector<string> result;
+
     for (const auto& p : basketball) {
         names.insert(p.first_name + " " + p.last_name);
     }
+
     for (const auto& p : football) {
         string fullName = p.first_name + " " + p.last_name;
         if (names.count(fullName)) {
             result.push_back(fullName);
         }
     }
+
     return result;
 }
+
 int main() {
     vector<Player> basketball_players = {
         {"Jill", "Huang", "Gators"},
@@ -48,9 +53,11 @@ int main() {
     vector<string> commonPlayers =
         findCommonPlayers(basketball_players, football_players);
 
+    cout << "Players in both sports:" << endl;
     for (const auto& name : commonPlayers) {
         cout << name << endl;
     }
+
     return 0;
 }
 ```
@@ -61,11 +68,8 @@ int main() {
 
 using namespace std;
 
-// Function to find the missing number
 int findMissingNumber(const vector<int>& nums) {
     int n = nums.size();
-
-    // Sum of numbers from 0 to n
     int expectedSum = n * (n + 1) / 2;
 
     int actualSum = 0;
@@ -80,8 +84,9 @@ int main() {
     vector<int> example1 = {2, 3, 0, 6, 1, 5};
     vector<int> example2 = {8, 2, 3, 9, 4, 7, 5, 0, 6};
 
-    cout << findMissingNumber(example1) << endl; // 4
-    cout << findMissingNumber(example2) << endl; // 1
+    cout << "Missing numbers:" << endl;
+    cout << findMissingNumber(example1) << endl;
+    cout << findMissingNumber(example2) << endl;
 
     return 0;
 }
@@ -91,7 +96,9 @@ int main() {
 #include <iostream>
 #include <vector>
 #include <algorithm>
+
 using namespace std;
+
 int maxProfit(const vector<int>& prices) {
     if (prices.empty()) return 0;
 
@@ -105,10 +112,12 @@ int maxProfit(const vector<int>& prices) {
 
     return maxProfit;
 }
+
 int main() {
     vector<int> prices = {10, 7, 5, 8, 11, 2, 6};
 
-    cout << maxProfit(prices) << endl; 
+    cout << "Maximum profit:" << endl;
+    cout << maxProfit(prices) << endl;
 
     return 0;
 }
@@ -118,7 +127,10 @@ int main() {
 #include <iostream>
 #include <vector>
 #include <climits>
+#include <algorithm>
+
 using namespace std;
+
 int highestProduct(const vector<int>& nums) {
     int max1 = INT_MIN, max2 = INT_MIN;
     int min1 = INT_MAX, min2 = INT_MAX;
@@ -130,6 +142,7 @@ int highestProduct(const vector<int>& nums) {
         } else if (num > max2) {
             max2 = num;
         }
+
         if (num < min1) {
             min2 = min1;
             min1 = num;
@@ -137,11 +150,16 @@ int highestProduct(const vector<int>& nums) {
             min2 = num;
         }
     }
+
     return max(max1 * max2, min1 * min2);
 }
+
 int main() {
     vector<int> nums = {5, -10, -6, 9, 4};
-    cout << highestProduct(nums) << endl; 
+
+    cout << "Highest product of two numbers:" << endl;
+    cout << highestProduct(nums) << endl;
+
     return 0;
 }
 
@@ -182,10 +200,12 @@ int main() {
 
     vector<double> sorted = sortTemperatures(temps);
 
+    cout << "Sorted temperatures:" << endl;
     cout << fixed << setprecision(1);
     for (double t : sorted) {
         cout << t << " ";
     }
+    cout << endl;
 
     return 0;
 }
@@ -195,26 +215,23 @@ int main() {
 #include <iostream>
 #include <vector>
 #include <unordered_set>
-
+#include <algorithm>
 using namespace std;
-
-// Function to find the length of the longest consecutive sequence
 int longestConsecutive(const vector<int>& nums) {
     unordered_set<int> numSet(nums.begin(), nums.end());
     int longest = 0;
 
     for (int num : numSet) {
-        // Only start counting if this is the beginning of a sequence
         if (!numSet.count(num - 1)) {
-            int currentNum = num;
-            int currentLength = 1;
+            int current = num;
+            int length = 1;
 
-            while (numSet.count(currentNum + 1)) {
-                currentNum++;
-                currentLength++;
+            while (numSet.count(current + 1)) {
+                current++;
+                length++;
             }
 
-            longest = max(longest, currentLength);
+            longest = max(longest, length);
         }
     }
 
@@ -225,8 +242,9 @@ int main() {
     vector<int> nums1 = {10, 5, 12, 3, 55, 30, 4, 11, 2};
     vector<int> nums2 = {19, 13, 15, 12, 18, 14, 17, 11};
 
-    cout << longestConsecutive(nums1) << endl; // Expected output: 4
-    cout << longestConsecutive(nums2) << endl; // Expected output: 5
+    cout << "Longest consecutive sequence lengths:" << endl;
+    cout << longestConsecutive(nums1) << endl;
+    cout << longestConsecutive(nums2) << endl;
 
     return 0;
 }
